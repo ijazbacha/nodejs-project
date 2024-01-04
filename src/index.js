@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
-import connectDB from "./db";
+import connectDB from "./db/index.js";
 
 dotenv.config({
     path: "./env"
@@ -8,6 +8,10 @@ dotenv.config({
 
 connectDB()
 const app = express()
+
+
+
+
 
 // ( async () => {
 //     try {
