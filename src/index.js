@@ -7,7 +7,6 @@ dotenv.config({
 })
 
 connectDB()
-const app = express()
 
 
 
