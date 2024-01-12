@@ -2,41 +2,41 @@ import { Schema, model } from "mongoose";
 
 const videoSchema = new Schema(
     {
-        videoFile:{
+        videoFile: {
             type: String, // cloudinary
             required: true
         },
-        thumbnail:{
+        thumbnail: {
             type: String, // cloudinary
             required: true
         },
-        title:{
+        title: {
             type: String,
             required: true,
             index: true
         },
-        description:{
+        description: {
             type: String,
             required: true
         },
-        views:{
+        views: {
             type: Number,
             default: 0
         },
-        duration:{
+        duration: {
             type: String, // cloudinary
         },
-        isPublish:{
+        isPublish: {
             type: Boolean,
             default: true
         },
-        owner:{
+        owner: {
             type: Schema.Types.ObjectId,
             ref: "User",
             required: true
         }
-    }, 
-    {timestamps: true}
+    },
+    { timestamps: true }
 )
 
 export const Video = model("Video", videoSchema)
